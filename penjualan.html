@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjualan</title>
+    <script>
+      function hitung() {
+        // ambil nilai dari input
+        var namaBarang = document.getElementById("nama_barang").value;
+        var jumlahBarang = parseInt(document.getElementById("jumlah_barang").value);
+        var hargaBarang = parseInt(document.getElementById("harga_barang").value);
+        
+        // hitung total pembayaran
+        var total = jumlahBarang * hargaBarang;
+        
+        // tampilkan hasil
+        document.getElementById("hasil").innerHTML = "Anda membeli " + namaBarang + " sebanyak " + jumlahBarang + " buah dengan harga Rp " + hargaBarang + " per buah. Total pembayaran Anda adalah Rp " + total + ".";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Penjualan</h1>
+    <form>
+      <label for="nama_barang">Nama Barang:</label>
+      <input type="text" id="nama_barang" name="nama_barang"><br><br>
+      <label for="jumlah_barang">Jumlah Barang:</label>
+      <input type="text" id="jumlah_barang" name="jumlah_barang"><br><br>
+      <label for="harga_barang">Harga Barang:</label>
+      <input type="text" id="harga_barang" name="harga_barang"><br><br>
+      <input type="button" value="Hitung" onclick="hitung()">
+    </form>
+    <p id="hasil"></p>
+  </body>
+</html>
